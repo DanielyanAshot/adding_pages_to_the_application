@@ -1,0 +1,33 @@
+.SingleProduct{
+  margin-top: 15px;
+  border: solid 2px rgba(66, 60, 65, 0.171);
+  width:33%;
+  display: flex;
+  text-align: center;
+}
+
+.SingleProductImg{
+    cursor: pointer;
+}
+
+.addToCartButton{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.SingleProductName{
+    width: 100%;
+    height: 50%;
+}
+
+.SingleProductImg{
+    width: 200px;
+    height: 200px;
+}
+
+.info{
+    width: 100%;
+    padding: 25px;
+    font-weight: bolder;
+}
