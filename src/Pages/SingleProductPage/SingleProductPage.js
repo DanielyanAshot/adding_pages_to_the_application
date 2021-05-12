@@ -1,10 +1,14 @@
 import  Context from '../../Context';
 import {useContext} from 'react';
+import {useRouteMatch} from 'react-router-dom';
 import './SingleProductPage.css';
 
-const SingleProductPage = ({product}) => {
+const SingleProductPage = () => {
   const addToCart = useContext(Context).addToCart;
-  
+  const data = useContext(Context).data;
+  const id = useRouteMatch().params.id;
+  const product = data.find((item) => item.id === +id);
+
   return(
         <div className = "SingleProductPage">
           <div className = "productImage">
@@ -14,7 +18,8 @@ const SingleProductPage = ({product}) => {
           <div className = "productInfo">
             <span className = "productName">{product.name}</span>
             <div className = "productColor" style={{"backgroundColor":product.color}}></div>
-            <p className = "productPrice">{product.price}</p>
+            <p className = "productDescription">{product.description}</p>
+            <p className = "ProductPrice">{product.price}</p>
           </div>
           
           <div className = "Button">

@@ -1,5 +1,5 @@
 import {useHistory} from 'react-router-dom';
-import  Context from '../../../Context';
+import Context from '../../../Context';
 import {useContext} from 'react';
 import './SingleProduct.css';
 
