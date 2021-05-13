@@ -12,7 +12,7 @@ function Main() {
   useEffect(() => {fetch("product_list.json").then(response => response.json()).then((response) => {
       setData(response);
     }
-  )}, [setData]);
+  )}, []);
 
   const subtotalCalculator = useCallback (newData =>{
     return newData.reduce(function(aggr, item){
